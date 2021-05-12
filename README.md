@@ -1,6 +1,6 @@
 # Terraform
+This Guide will help you setup a Aks and ACR via Terraform and push Docker Image to AKS 
 
-#Steps**
 
 **Step 1 Mount Clouddrive**
 
@@ -39,18 +39,19 @@ az acr login -n <acr>
 docker login <acr>.azurecr.io <Admin Credentials>
 
 **Step 3  Docker Pull Image**
+
 docker pull tiangolo/uvicorn-gunicorn-fastapi
 
 **Step 4  Docker tag Image**
+
 docker tag tiangolo/uvicorn-gunicorn-fastapi <acr>.azurecr.io/tekion/fastapi
 
 **Step 5  Docker Pull Image**
+
 docker push <acr>.azurecr.io/tekion/fastapi
 
-**Step 6  Run Kubectl Command **
-
-Apply Yaml for Deployment and Service
+**Step 6  Run Kubectl Command Apply Yaml for Deployment and Service**
 
 kubectl apply -f "C:\Users\chsukhij\OneDrive - Microsoft\Desktop\fastapi.yaml"
 
-Conatct : Chirag Sukhija ( ChiragSukhija.com )
+Contact : Chirag Sukhija ( ChiragSukhija.com )
